@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.target {
+    z-index: 1;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    left: calc(50% - 50px);
+    border: 1px solid #111;
+    text-align: center;
+}
+
+.target p {
+    font-size: 1.5rem;
+    line-height: 70px;
+}
+
+main {
+    margin:7rem auto;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-radius: 30%;
+}
+
+.wrapper {
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 167, 0, 0.7);
+    color: white;
+    border: 1px solid green;
+}
+
+.wrapper-1 {
+    padding-right: 15%;
+    border-radius: 10% 0 0 10%;
+}
+
+.wrapper-2 {
+    padding-left: 15%;
+    border-radius:0 10% 10% 0;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin: 10px 0 80px 0;
+}
+
+.total {
+    margin: 40px auto;
+}
+
+.total p {
+    font-size: 1.5rem;
+}
+
+.score {
+    margin: 5px auto;
+    display: block;
+    font-size: 2rem;
+    height: 60px;
+    width: 130px;
+    line-height: 60px;
+    background-color: white;
+    color: black;
+}
+
+.current p {
+    font-size: 1rem;
+}
+
+.center {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    text-align: center;
+}
+
+.new {
+    margin: 0 auto;
+    display: block;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.roll {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.hold {
+    display: block;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.cube {
+    margin: 70px auto 40px;
+    height: 150px;
+    width: 150px;
+    transform-style: preserve-3d;
+    transform: translateZ(-75px);
+    transition: transform 1s;
+}
+
+.cube__face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    line-height: 150px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.cube__face--1  { background: black;  opacity: 0.75;}
+.cube__face--3  { background: black;   opacity: 0.75; }
+.cube__face--2  {  background: black;   opacity: 0.75; }
+.cube__face--4  {  background: black;   opacity: 0.75; }
+.cube__face--5   {  background: black;   opacity: 0.75; }
+.cube__face--6 {  background: black;  opacity: 0.75; }
+
+.cube__face--1  { transform: rotateY(  0deg) translateZ(75px); }
+.cube__face--2   { transform: rotateY(180deg) translateZ(75px); }
+.cube__face--3  { transform: rotateY( 90deg) translateZ(75px); }
+.cube__face--4   { transform: rotateY(-90deg) translateZ(75px); }
+.cube__face--5   { transform: rotateX( 90deg) translateZ(75px); }
+.cube__face--6 { transform: rotateX(-90deg) translateZ(75px); }
+
+
+.cube.show-1  { transform: translateZ(-75px) rotateY(   0deg); }
+.cube.show-2  { transform: translateZ(-75px) rotateY(-180deg); }
+.cube.show-3  { transform: translateZ(-75px) rotateY( -90deg); }
+.cube.show-4   { transform: translateZ(-75px) rotateY(  90deg); }
+.cube.show-5   { transform: translateZ(-75px) rotateX( -90deg); }
+.cube.show-6 { transform: translateZ(-75px) rotateX(  90deg); }
+
+
+@media only screen and (max-width:750px) {
+    .target {
+        background-color: white;
+        border: 1px solid white;
+    }
+
+    main {
+        margin-top: 0;
+        height: 300px;
+    }
+    
+    .wrapper-1 {
+        padding-right: 0;
+        border-radius: 0;
+    }
+    
+    .wrapper-2 {
+        padding-left: 0;
+        border-radius: 0;
+    }
+    
+    .name {
+        margin: 20px 0;
+    }
+
+    .total {
+        margin: 10px auto;
+    }
+
+    .center {
+        top: 320px;
+    }
+
+    .cube {
+        margin: 20px auto 20px; 
+    }
+}

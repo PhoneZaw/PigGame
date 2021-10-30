@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>Pig Game</title>
+</head>
+<body>
+    <div class="target">
+        <p id="target">20</p>
+    </div>
+    <main>
+        <div class="wrapper wrapper-1">
+            <p class="name">
+                Player 1
+            </p>
+            <div class="total">
+                <p>Total Score</p>
+                <div class="score">
+                    0
+                </div>
+            </div>
+            <div class="current">
+                <p>Current Score</p>
+                <div class="score">0</div>
+            </div>
+        </div>
+        <div class="wrapper wrapper-2 opacity">
+            <p class="name">
+                Player 2
+            </p>
+            <div class="total">
+                <p>Total Score</p>
+                <div class="score">
+                    0
+                </div>
+            </div>
+            <div class="current">
+                <p>Current Score</p>
+                <div class="score">0</div>
+            </div>
+        </div>
+    </main>
+    <div class="center">
+        <button class="new">Start</button>
+
+        <div class="cube">
+            <div class="cube__face cube__face--1">1</div>
+            <div class="cube__face cube__face--2">2</div>
+            <div class="cube__face cube__face--3">3</div>
+            <div class="cube__face cube__face--4">4</div>
+            <div class="cube__face cube__face--5">5</div>
+            <div class="cube__face cube__face--6">6</div>
+        </div>
+
+        <button class="roll" type="button" >Roll Dice</button>
+        <button class="hold" type="button" >Hold</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Player1 Wins</p>
+        </div>
+    </div>
+
+    <div id="targetModal" class="target-modal">
+        <div class="modal-content target-modal-content">
+          <label for="target-score">Target Score: </label>
+          <input id="target-score" type="number" maxlength="4" value="20"/>
+          <button class="target-button">Start</button>
+        </div>
+    </div>
+
+    <script src="function.js"></script>
+</body>
+</html>
